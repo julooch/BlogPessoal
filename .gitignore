@@ -1,0 +1,29 @@
+# Arquivos de Compilação e Output
+target/
+build/
+bin/
+
+# Arquivos de Configuração do IDE
+.idea/
+.vscode/
+*.iml
+
+# Arquivos de Logs e Temporários
+*.log
+*.tmp
+
+# Arquivos de Configuração do Maven
+/mvnw
+/mvnw.cmd
+/target/
+
+# Arquivos do Sistema Operacional
+Thumbs.db
+.DS_Store
+
+# Arquivos de Configuração do Spring Boot
+application.properties
+application.yml
+
+# Arquivos de Banco de Dados (Exemplo para H2)
+h2*.db
