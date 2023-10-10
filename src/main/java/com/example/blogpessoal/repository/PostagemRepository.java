@@ -7,7 +7,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.example.blogpessoal.model.Postagem;
 
-public interface PostagemRepository extends JpaRepository<Postagem, Long>{
+public interface PostagemRepository extends JpaRepository<Postagem, Long>{ /*Pede a model e a tipagem da PK*/
 
 	public List<Postagem> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
+	/* Select * from postagem where titulo = "" */
 }

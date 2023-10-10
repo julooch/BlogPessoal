@@ -24,12 +24,12 @@ import com.example.blogpessoal.repository.TemaRepository;
 
 import jakarta.validation.Valid;
 
-@RestController
+@RestController /*Anotação que diz que essa classe é um Controller*/
 @RequestMapping("/postagens")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")/*Proteção do backend - só frontend que selecionamos podem acessar nosso backend*/
 public class PostagemController {
 
-	@Autowired
+	@Autowired /*Obtem o controle da classe sem precisar extendê-la*/
 	private PostagemRepository postagemRepository;
 	
 	@Autowired

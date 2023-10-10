@@ -15,15 +15,15 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-@Entity
-@Table(name = "tb_postagens")
+@Entity /*Anotação que implica que essa classe será uma Model*/
+@Table(name = "tb_postagens")/*Isso cria uma tabela no MySQL*/
 public class Postagem {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id /*Isso diz que é uma PK*/
+	@GeneratedValue(strategy = GenerationType.IDENTITY)/*Isso gera o id automaticamente*/
 	private long id;
 	
-	@NotBlank(message = "O atributo título é obrigatório!")
+	@NotBlank(message = "O atributo título é obrigatório!")/*Não permite espaços em branco*/
 	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
 	private String titulo;
 	
@@ -37,6 +37,10 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
 	public long getId() {
 		return id;
@@ -76,6 +80,14 @@ public class Postagem {
 
 	public void setTema(Tema tema) {
 		this.tema = tema;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	
