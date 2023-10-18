@@ -20,7 +20,6 @@ Thumbs.db
 .DS_Store
 
 # Arquivos de Configuração do Spring Boot
-application.properties
 application.yml
 
 # Arquivos de Banco de Dados (Exemplo para H2)
