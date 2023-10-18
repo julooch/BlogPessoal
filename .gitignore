@@ -13,8 +13,6 @@ bin/
 *.tmp
 
 # Arquivos de Configuração do Maven
-/mvnw
-/mvnw.cmd
 /target/
 
 # Arquivos do Sistema Operacional
